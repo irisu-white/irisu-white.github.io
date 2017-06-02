@@ -1,7 +1,7 @@
 ---
 title: "Pwntools's DynELF module"
 date: 2016-09-07
-category: Bin
+tag: Bin
 layout: post
 ---
 
