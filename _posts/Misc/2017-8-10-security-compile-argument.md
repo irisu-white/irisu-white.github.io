@@ -1,8 +1,8 @@
 ---
 title: "GCC中的安全编译参数"
-date： 2017-8-10
-tag：Misc
-layout：post
+date: 2017-8-10
+tag: Misc
+layout: post
 ---
 
 Linux中有各种各样的安全防护，ASLR是由内核直接提供的，通过系统配置文件控制。NX，Canary，PIE，RELRO在编译时指定，根据各项参数调整。在无参数指定时，使用默认的参数。不同系统环境中默认选项并不相同。
