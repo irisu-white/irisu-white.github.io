@@ -1,7 +1,7 @@
 ---
 title: "GCC中的安全编译参数"
 date: 2017-8-10
-tag: Misc
+tag: CS
 layout: post
 ---
 
