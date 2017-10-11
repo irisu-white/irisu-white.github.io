@@ -32,8 +32,8 @@ gcc hello.c -o hello-S -fstack-protector-all -z noexecstack -pie -z now
 
 PS：
 
-* -z为传入ld的key，具体的内容可以在man ld中找到
-* -f为-fno-的缩写，两者相同，但是在man gcc中不重复，间文档起始部分的说明
+* -z为传入ld的key，具体的内容可以通过man ld找到
+* -f为-fno-的缩写，两者相同，但是在man gcc中不重复，见文档起始部分的说明
 
 默认编译参数可以由环境变量CFLAG调节，如同makefile文件中的一样。比如：`export CFLAGS='-std=c99'`
 
