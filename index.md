@@ -11,7 +11,7 @@ DrimTuer
 
 ## 爱好
 
-* CTF Binary，永远的萌新
+* Binary Security，永远的萌新
 * Haskell，虽然很难但是很有趣
 * 东方Project，Normal级，Hard级努力中
 
@@ -26,3 +26,4 @@ DrimTuer
 * 玩一盘麻将山放松一下
 * 偶尔补补番，很喜欢各种故事
 * 日常闲聊，游戏 / 我吃不到的美食 / (云)撸猫 / 看别人画画 / ...
+
