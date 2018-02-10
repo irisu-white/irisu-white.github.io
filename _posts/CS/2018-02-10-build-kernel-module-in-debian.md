@@ -1,5 +1,5 @@
 ---
-title: 在Debian中搭建内核模块(kernel module)编译环境
+title: 在Debian中搭建内核模块编译环境
 date: 2018-02-10
 tag: CS
 layout: post
@@ -21,43 +21,46 @@ $ sudo apt-get install linux-headers-$(uname -r)
 
 进行简单的编译测试。
 
-准备hello world文件。
+准备hello.c
 
-`File name: hello.c`
 
 ``` c
-#include <linux/module.h>
+#include <linux/module.h>                                                                                                                                  
 #include <linux/kernel.h>
- 
-int init_module(void)
-{
-	printk(KERN_INFO "init_module() called\n");
-	return 0;
+
+MODULE_LICENSE("Dual BSD/GPL");
+
+static int hello_init(void){
+    printk(KERN_ALERT "Hello, world\n");
+
+    return 0;
 }
- 
-void cleanup_module(void)
-{
-	printk(KERN_INFO "cleanup_module() called\n");
+
+static void hello_exit(void){
+    printk(KERN_ALERT "Exit, module.\n");
 }
+
+module_init(hello_init);
+module_exit(hello_exit);
 ```
 
 内核模块的编译重点在Makefile上。需要注意的是，make对应的makefile文件的名称必须为**Makefile**，不能是其他的。
 
-`File name: Makefile`
 
 ``` shell
-obj-m := hello.o
+# File name: Makefile
 
-KDIR := /lib/modules/$(shell uname -r)/build
+obj-m := hello.o                                                                                                                                           
+KERNELDIR ?= /lib/modules/$(shell uname -r)/build
 PWD := $(shell pwd)
 
 default:
-    $(MAKE) -C $(KDIR) SUBDIRS=$(PWD) modules
+    $(MAKE) -C $(KERNELDIR) M=$(PWD) modules
 ```
 
 这是最粗糙的写法，但是作为测试足够了。
 
-最后执行`make`进行编译即可。
+在hello.c的所在目录执行`make`进行编译即可。
 
 详细信息参考链接3。《Linux设备驱动程序》中的Makefile更认真一些。
 
