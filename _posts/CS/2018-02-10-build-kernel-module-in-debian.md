@@ -25,7 +25,7 @@ $ sudo apt-get install linux-headers-$(uname -r)
 
 
 ``` c
-#include <linux/module.h>                                                                                                                                  
+#include <linux/module.h>
 #include <linux/kernel.h>
 
 MODULE_LICENSE("Dual BSD/GPL");
@@ -50,7 +50,7 @@ module_exit(hello_exit);
 ``` shell
 # File name: Makefile
 
-obj-m := hello.o                                                                                                                                           
+obj-m := hello.o
 KERNELDIR ?= /lib/modules/$(shell uname -r)/build
 PWD := $(shell pwd)
 
