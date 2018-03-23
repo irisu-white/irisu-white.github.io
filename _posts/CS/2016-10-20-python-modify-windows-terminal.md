@@ -1,7 +1,7 @@
 ---
-title: [Python] Windows下调整控制台大小
+title: 使用Python调整Windows控制台的大小
 date: 2016-10-20
-tag: Code
+tag: CS
 layout: post
 ---
 
