@@ -32,8 +32,8 @@ static char get_root[] = "getroot";
 
 ``` c
 struct proc_dir_entry *create_proc_read_entry(const char *name,
-                                        mode_t mode, struct proc_dir_entry *base,
-                                        read_proc_t *read_proc, void *data);
+                                    mode_t mode, struct proc_dir_entry *base,
+                                    read_proc_t *read_proc, void *data);
 
 typedef int (*read_proc_t)(char *page, char **start, off_t offset, int count,
                         int *eof, void *data);
@@ -106,8 +106,9 @@ struct cred{
     kgid_t egid;
     ...
 }
+```
 
-这一次他们的类型在也不是整数了.我们展开`kuid_t`和`kgid_t`:
+这一次他们的类型不是整数了.我们展开`kuid_t`和`kgid_t`:
 
 ``` c
 typedef struct {
