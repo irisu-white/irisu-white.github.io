@@ -80,8 +80,10 @@ zsh的插件,在输入命令时自动提示补全.
 直接从源码安装即可:
 
 ```
-git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/plugins/zsh-autosuggestions
 ```
+
+需要注意的是,这个插件支持多种安装.使用oh-my-zsh安装时,要确保安装在oh-my-zsh的插件目录里面.
 
 之后在`.zshrc`中添加插件:
 
