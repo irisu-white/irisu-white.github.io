@@ -73,6 +73,8 @@ zsh的插件,在输入命令时自动提示补全.
 
 要补全的命令部分以灰色显示,按右方向键即可补全完整.bash自身的快捷键`Ctrl-f`与右方向键相等.
 
+可以直接配合zsh安装,也可使用oh-my-zsh安装.
+
 前置:
 
 * zsh >= 4.3.11
@@ -83,7 +85,7 @@ zsh的插件,在输入命令时自动提示补全.
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/plugins/zsh-autosuggestions
 ```
 
-需要注意的是,这个插件支持多种安装.使用oh-my-zsh安装时,要确保安装在oh-my-zsh的插件目录里面.
+需要注意的是,使用oh-my-zsh安装时,要确保安装在oh-my-zsh的插件目录里面,而不是安装在zsh的插件目录.
 
 之后在`.zshrc`中添加插件:
 
@@ -91,7 +93,8 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/plugins/
 plugins = (zsh-autosuggestions)
 ```
 
-PS: zsh有多个插件时,plugins的条目是这样的: `plugins = (git zsh-autosuggestions)`
+PS: oh-my-zsh有多个插件时,plugins的条目是这样的: `plugins = (git zsh-autosuggestions)`
+PPS: 可以在`~/.oh-my-zsh/plugins`中查看全部已安装的插件,文件夹名称即为插件名称.oh-my-zsh在安装时自带了大量实用插件,但是绝大部分没有启用.
 
 ## 仿真Windows的cls命令
 
