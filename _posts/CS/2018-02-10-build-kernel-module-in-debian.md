@@ -64,7 +64,19 @@ default:
 
 详细信息参考链接3。《Linux设备驱动程序》中的Makefile更认真一些。
 
-## 0x02 参考链接
+## 0x02 其他
+
+在更新内核版本后,`uname -r`会发生变动,导致Makefile使用的`/lib/modules/$(shell uname -r)/build`指向新的内核构建目录.
+
+但是linux-header的安装包同样是使用`uname -r`安装的,并不会随着内核更新同步更新(事实上你可以使用apt安装任意版本的linux-header).
+
+解决办法是安装新的linux-header,即重新执行步骤0x01即可.
+
+保留旧的linux-header安装包不会产生问题,或者也可以选择卸载它(如果使用上面的Makefile的话,旧包今后也不会被使用了).
+
+PS: Arch Linux的linux-header会随着内核版本自动同步,但是Debian不行.
+
+## 0x03 参考链接
 
 1. [How to install kernel headers on Linux][1]
 2. [How to install full kernel source on Debian or Ubuntu][2]
