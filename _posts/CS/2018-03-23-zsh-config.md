@@ -101,7 +101,10 @@ PS: zsh有多个插件时,plugins的条目是这样的: `plugins = (git zsh-auto
 
 ```
 alias cls="tput reset"
+alias cls="tput clear"
 ```
+
+上面两条任选一个对当前Terminal有效的即可(不需要两个全都添加)
 
 具体内容可以参考`man tput`
 
