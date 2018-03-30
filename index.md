@@ -5,7 +5,7 @@ layout: post
 
 DrimTuer
 
-来自二次元的非二次元爱好者
+[XDSEC](https://github.com/XDSEC)咸鱼成员
 
 有时也使用另一个ID，"天上的因幡"，可惜经常已被注册
 
@@ -17,12 +17,12 @@ DrimTuer
 
 ## 日常
 
-* C / C++ / Python，随意乱写
-* 与Linux做斗争，我最喜欢Arch了(笑)
+* 与Linux做斗争，Arch实在是太棒了(滑稽)
+* C / C++ / Python / Haskell，只会写原生
+* 使用IDA和GDB尝试做一些事情，但是经常失败
 * 向Github仓库push各种各样的东西，只是频率太低
-* 和gdb一起搞事情，当然还有IDA和OD和其他工具的帮忙
 
-* 玩一盘麻将山放松一下
+* 玩一盘绀珠传放松一下
 * 偶尔补补番，很喜欢各种故事
 * 日常闲聊，游戏 / 我吃不到的美食 / (云)撸猫 / 看别人画画 / ...
 
