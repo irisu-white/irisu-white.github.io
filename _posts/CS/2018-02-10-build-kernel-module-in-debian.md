@@ -44,7 +44,7 @@ module_init(hello_init);
 module_exit(hello_exit);
 ```
 
-内核模块的编译重点在Makefile上。需要注意的是，make对应的makefile文件的名称必须为**Makefile**，不能是其他的。
+内核模块的编译重点在Makefile上。需要注意的是，make对应的makefile文件的名称必须为**Makefile**，全部小写的makefile是不行的。
 
 
 ``` shell
@@ -54,11 +54,14 @@ obj-m := hello.o
 KERNELDIR ?= /lib/modules/$(shell uname -r)/build
 PWD := $(shell pwd)
 
-default:
+all:
     $(MAKE) -C $(KERNELDIR) M=$(PWD) modules
+
+clean:
+    $(MAKE) -C $(KERNELDIR) M=$(PWD) clean
 ```
 
-这是最粗糙的写法，但是作为测试足够了。
+除了使用modules参数构建模块之外，我们还可以使用clean参数方便的配置清理函数。
 
 在hello.c的所在目录执行`make`进行编译即可。
 
