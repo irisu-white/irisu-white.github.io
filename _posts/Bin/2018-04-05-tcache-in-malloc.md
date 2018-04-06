@@ -310,3 +310,9 @@ tcache的模型和bins相似，所以我们的思路和攻击bins是差不多的
 不过这些都是可以被修复的，与完整性检查造成的时间消耗相比，无锁算法带来的性能提升是非常有价值的。
 
 > 算法自身安全不代表整体一定安全
+
+## 相关链接
+
+1. [thread local caching in glibc malloc](http://tukan.farm/2017/07/08/tcache/)
+2. [MallocInternals](https://sourceware.org/glibc/wiki/MallocInternals)
+
