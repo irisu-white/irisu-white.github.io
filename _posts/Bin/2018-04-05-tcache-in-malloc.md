@@ -58,7 +58,7 @@ tcache会在下面的情况中被使用：
 * 被填充到tcache中的chunk以"使用中"的状态保存，它们的`inuse`标志位不会被清空
 
 
-## 弱检查特性
+## 0x02 弱检查特性
 
 tcache的链表操作由`tcache_put`和`tcache_get`完成。
 
@@ -96,7 +96,7 @@ tcache_get (size_t tc_idx)
 * tcache更宽松的检查让畸形数据更易构造
 * tcache结构本身非常脆弱，是"优良"的攻击目标
 
-## The House of Spirit
+## 0x03 The House of Spirit
 
 让我们观察一下`_int_free`中的tcache操作：
 
@@ -121,7 +121,7 @@ if (tcache &&
 
 面对如此宽松的检查，我们无需构造合法的`next_size`即可完成house of spirit。并且由于tcache的缓存范围很大，除了以往的fastbin之外，smallbin也可以成功构造house of spirit了。
 
-## chunk回环
+## 0x04 chunk回环
 
 继续分析`_int_free`中的代码，我们可以发现，tcache对Double-Free没有任何抵抗性。如果我们能在一块chunk上连续执行两次free，tcache中就会出现"单链表回环"。
 
@@ -149,7 +149,7 @@ DIAG_POP_NEEDS_COMMENT;
 
 唯一需要注意的是tcache的计数器，它可以小于0，但是上限却只有7。
 
-## chunk重叠
+## 0x05 chunk重叠
 
 现在分析一下`_int_malloc`中的tcache填充。我们以fastbin的情况为例：
 
@@ -178,7 +178,7 @@ if (tcache && tc_idx < mp_.tcache_bins)
 
 可以发现，在这个过程中tcache不会对chunk size进行检查。我们可以轻易的改写chunk size，并在下一次malloc中获得一个"与事实不符的chunk"，从而达成堆溢出，或者其他事情。
 
-## SmallBin的双链表
+## 0x06 SmallBin的双链表
 
 在填充smallbin的chunk时，我们关注一下双链表的unlink：
 
@@ -220,7 +220,7 @@ if (__glibc_unlikely (bck->fd != victim))
 
 我们可以更容易的完成House of Lore，或者在smallbin中完成与unsorted bck write相似的攻击。
 
-## 脆弱的TCache结构
+## 0x07 脆弱的TCache结构
 
 现在让我们的焦点转移到tcache的初始化：
 
@@ -267,7 +267,7 @@ tcache_init(void)
 
 回顾上面的一系列代码，我们可以得知，tcache不仅不会检查chunk的完整性，`tcache_perthread_struct`自身的完整性也不会被检查。如果我们可以溢出到tcache结构，覆写entries部分，我们就能控制tcache将chunk设置在任意内存区域中，就像利用arena的思路一样。
 
-## 其他问题
+## 0x08 其他问题
 
 被填入tcache中的chunk不会被清除inuse标志位，也不会被合并。
 
@@ -277,7 +277,7 @@ tcache_init(void)
 
 我们甚至可以充分利用mallo中的tcache回填机制，让fastbin/smallbin中的chunk重获inuse状态 -- 只需要触发一次合适的malloc
 
-## 绕过TCache
+## 0x09 绕过TCache
 
 有一点是必须被注意的，任何小于0x410的chunk在free时都会被无条件填入tcache，直到cache已满。这也就是说，如果我们需要进行Unlink攻击，或者构造Double-Free，必须先绕过tcache。
 
@@ -285,7 +285,7 @@ tcache_init(void)
 
 除了free，我们也需要注意malloc中的tcache回填，这可能会对我们的EXP产生影响。不过与tcache带来的便利相比，调整EXP是非常值得的，并且不会很难。
 
-## 总结
+## 0xA0 总结
 
 tcache的弱检查特性使得下面的情况更容易发生：
 
