@@ -285,7 +285,7 @@ tcache_init(void)
 
 除了free，我们也需要注意malloc中的tcache回填，这可能会对我们的EXP产生影响。不过与tcache带来的便利相比，调整EXP是非常值得的，并且不会很难。
 
-## 0xA0 总结
+## 0x0A 总结
 
 tcache的弱检查特性使得下面的情况更容易发生：
 
