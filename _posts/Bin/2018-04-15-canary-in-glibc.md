@@ -38,8 +38,6 @@ Canary有多种存在：
 ``` c
 /* foo.c */
 
-#include <stdio.h>
-
 int main(void){
     char haha[256];
 
