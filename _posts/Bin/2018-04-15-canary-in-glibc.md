@@ -49,7 +49,7 @@ int main(void){
 
 生成的汇编就会是这样的：
 
-``` asm
+```
 <+00>: push   rbp
 <+01>: mov    rbp,rsp
 <+04>: sub    rsp,0x110
@@ -151,7 +151,7 @@ _dl_setup_stack_chk_guard (void *dl_random)
 先来看看`THREAD_SET_STACK_GUARD`的具体实现。这肯定是一段宏(因为是全大写)：
 
 ``` c
-// File: sysdeps/x86_64/tls.h
+// File: sysdeps/x86_64/nptl/tls.h
 
 # define THREAD_SET_STACK_GUARD(value) \
     THREAD_SETMEM (THREAD_SELF, header.stack_guard, value)
@@ -233,6 +233,8 @@ struct pthread
 根据`offsetof`的其他参数，我们忽视pthread中的其他部分(这个结构非常大，有300多行源代码)，关注一下`tcbhead_t`类型：
 
 ``` c
+// File: sysdeps/x86_64/nptl/tls.h
+
 typedef struct
 {
   void *tcb;        /* Pointer to the TCB.  Not necessarily the
@@ -326,7 +328,7 @@ DESCRIPTION
 
 这可以在gdb中方便完成：
 
-``` bash
+```
 $ gdb foo
 gef➤  catch syscall arch_prctl
 Catchpoint 1 (syscall 'arch_prctl' [158])
@@ -341,7 +343,7 @@ gef➤  run
 [#4] 0x7ffff7dd8f38 → Name: _start()
 ```
 
-清晰的函数调用栈。这次我们只关系FS的设置，快速的查看一下`init_tls`函数：
+清晰的函数调用栈。这次我们只关心FS的设置，快速的查看一下`init_tls`函数：
 
 ``` c
 // File: elf/rtld.c
