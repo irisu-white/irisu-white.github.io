@@ -3,7 +3,7 @@ title: "About Me"
 layout: post
 ---
 
-DrimTuer
+ID: DrimTuer
 
 [XDSEC](https://github.com/XDSEC)咸鱼成员
 
