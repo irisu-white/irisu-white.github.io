@@ -3,11 +3,11 @@ title: "About Me"
 layout: post
 ---
 
-ID: DrimTuer
+ID：DrimTuer / 状态不明的因幡
 
 [XDSEC](https://github.com/XDSEC)咸鱼成员
 
-有时也使用另一个ID，"天上的因幡"，可惜经常已被注册
+虽然两个ID总是混起来用，但是本体是相同的
 
 ## 爱好
 
