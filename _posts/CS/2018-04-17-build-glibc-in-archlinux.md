@@ -54,6 +54,8 @@ $ git log --follow repos/core-x86_64/PKGBUILD
 
 如果需要patch源码本身，可以参考这个页面：[Patching packages - ArchWiki][3]
 
+关于编译Debug版本，可以参考这个页面：[Debug - Getting Traces - ArchWiki][6]
+
 我们可以使用`makepkg`来获取源码：
 
 ```
@@ -168,3 +170,5 @@ $ ./foo
 [3]: https://wiki.archlinux.org/index.php/Patching_packages
 [4]: https://sourceware.org/ml/libc-alpha/2017-01/msg00524.html
 [5]: https://wiki.archlinux.org/index.php/Makepkg
+[6]: https://wiki.archlinux.org/index.php/Debug_-_Getting_Traces
+
