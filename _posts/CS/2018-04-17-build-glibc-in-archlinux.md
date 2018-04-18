@@ -113,7 +113,7 @@ $ makepkg -e
 
 接下来要做的就是等待。在我的i7-8G电脑上，使用了一个小时完成了glibc的编译。
 
-如果需要安装，使用`sudo pacman -U package-name`。如果需要单独文件，在src目录下可以找到编译好的文件。
+如果需要安装，使用`sudo pacman -U package-name`。如果需要单独文件，在pkg目录下可以找到编译好的文件。
 
 ## 其他事情
 
