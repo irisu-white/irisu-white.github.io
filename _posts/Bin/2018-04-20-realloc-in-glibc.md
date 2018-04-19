@@ -40,7 +40,7 @@ int oldsize = chunksize(ptr);
             * GOTO:Split
         3. memcpy(ptr, newp, size)
         4. free(ptr)
-        5 return(newp)
+        5. return(newp)
 
 * Split
     * if(remainder < `MIN_SIZE`)
