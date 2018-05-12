@@ -95,6 +95,22 @@ build() {
 
 所以我们只需要在`_configure_flags`中添加一句`--disable-experimental-malloc`即可。
 
+## 导入公钥
+
+如果PKGBUILD中提供了[validpgpkeys][7]参数，makepkg会在下载所需文件后进行[签名验证][8]。
+
+在缺失验证签名所需的密钥时，makepkg会报告"the PGP key could not be verified"错误。
+
+使用`gpg`导入缺少的公钥：
+
+```
+$ gpg --recv-keys key-id
+```
+
+key-id为PKGBUILD中validpgpkeys字段的内容。
+
+更多gpg公钥导入的信息可以参考[这里][9]
+
 ## 进行编译
 
 使用makepkg进行编译即可。关于makepkg，可以参考：[makepkg - ArchWiki][5]
@@ -171,4 +187,7 @@ $ ./foo
 [4]: https://sourceware.org/ml/libc-alpha/2017-01/msg00524.html
 [5]: https://wiki.archlinux.org/index.php/Makepkg
 [6]: https://wiki.archlinux.org/index.php/Debug_-_Getting_Traces
+[7]: https://wiki.archlinux.org/index.php/PKGBUILD#validpgpkeys
+[8]: https://wiki.archlinux.org/index.php/Makepkg#Signature_checking
+[9]: https://wiki.archlinux.org/index.php/GnuPG#Import_a_public_key
 
