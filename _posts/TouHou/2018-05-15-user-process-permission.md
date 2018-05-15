@@ -5,6 +5,12 @@ tag: TouHou
 layout: post
 ---
 
+翻译自[users-perms-lec](http://haifux.org/lectures/84-sil/users-processes-files-and-permissions/users-perms-lec.html)
+
+使用猴子方法进行翻译，能力有限，并且未完成。
+
+TouHou目录下的文章都是个人性质的 #滑稽
+
 ## 介绍
 
 * Linux是一个多用户系统，允许多个用户在一台机器上同时工作。
