@@ -1,7 +1,7 @@
 ---
 title: User, Process and Permission
 date: 2018-05-15
-tag: TouHou
+tag: Game
 layout: post
 ---
 

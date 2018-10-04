@@ -1,6 +1,6 @@
 ---
 title: 东方Project-游玩记录
-tag: TouHou
+tag: Game
 layout: post
 ---
 
