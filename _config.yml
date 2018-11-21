@@ -1,12 +1,12 @@
 # Site settings
 title: RabbitHouse
-email: drimtuer@gmail.com
+email: irisu.white@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Blog of DrimTuer
+  Blog of Irisu White
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://rabbithouse.me" # the base hostname & protocol for your site
+#url: "http://rabbithouse.me" # the base hostname & protocol for your site
 rss_url: /pages/feed.xml
-author: DrimTuer
+author: Irisu White
 
 # Sidebar filter
 # Choose 'tag' or 'category' as filter in sidebar.
@@ -15,8 +15,8 @@ recent_num: 20
 
 # Social account
 #twitter: masonsuyan
-weibo: DrimTuer
-github: drimtuer
+#weibo: DrimTuer
+github: irisu-white
 #instagram: suyan0830
 #linkedin: suyan0830
 
