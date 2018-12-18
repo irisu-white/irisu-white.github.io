@@ -1,6 +1,6 @@
 # Site settings
 title: RabbitHouse
-email: irisu.white@gmail.com
+email: irisu@uprprc.club
 description: > # this means to ignore newlines until "baseurl:"
   Blog of Irisu White
 baseurl: "" # the subpath of your site, e.g. /blog/
@@ -14,11 +14,11 @@ filter: 'tag'
 recent_num: 20
 
 # Social account
-#twitter: masonsuyan
-#weibo: DrimTuer
+#twitter:
+#weibo:
 github: irisu-white
-#instagram: suyan0830
-#linkedin: suyan0830
+#instagram:
+#linkedin:
 
 # avatar and Favicon
 avatar: /assets/img/avatar.png
