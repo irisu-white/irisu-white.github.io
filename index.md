@@ -28,3 +28,7 @@ Irisu这个名字本身也是neta
 * 偶尔补补番，很喜欢各种故事
 * 日常闲聊，游戏 / 我吃不到的美食 / (云)撸猫 / 看别人画画 / ...
 
+## Friend Link
+
+* [EndCat](http://endcat.cn/kanna/)
+
