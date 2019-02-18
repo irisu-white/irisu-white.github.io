@@ -11,10 +11,8 @@ Irisu这个名字本身也是neta
 
 ## 爱好
 
-* <strike>Binary Security，永远的萌新</strike>
-
 * Haskell，虽然很难但是很有趣
-* OSU！努力中，音游不是也是STG的一种么？
+* OSU！努力中，虽然很菜但是很快乐
 * TouHou Project，Normal级，Hard级努力中
 
 ## 日常
