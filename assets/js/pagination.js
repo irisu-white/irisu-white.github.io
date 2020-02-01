@@ -13,12 +13,12 @@ function showPost(event, page){
 // auto start
 $(document).ready(function(){
     let count = $("#post-list").children().length;
-    count = count / 8;
+    num = count / 8;
     if(count % 8 != 0){
-        count += 1;
+        num += 1;
     }
     $("#post-selector").twbsPagination({
-        totalPages: count,
+        totalPages: num,
         visiblePages: 10,
         onPageClick: showPost
     });
