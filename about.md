@@ -1,6 +1,6 @@
 ---
 title: "About Me"
-layout: post
+layout: about
 ---
 
 ID：Irisu White / 浅白色的Irisu

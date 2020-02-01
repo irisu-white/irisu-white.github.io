@@ -1,0 +1,52 @@
+#post-main{
+    h1, h2, h3, h4, h5, h6{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    h1 + h2, h2 + h3, h3 + h4, h4 + h5, h5 + h6{
+        margin-top: .5rem;
+    }
+    h1{
+        font-size: 1.75rem;
+    }
+    h2{
+        font-size: 1.5rem;
+    }
+    h3, h4, h5, h6{
+        font-size: 1.25rem;
+    }
+    h1:before, h2:before{
+        /* use !important to prevent issues with browser extensions that change fonts */
+        font-family: 'icomoon' !important;
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        /* Better Font Rendering */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        /* icon */
+        content: "\ea76";
+        /* padding */
+        // margin-right: .5rem;
+    }
+    pre{
+        padding: .5rem 0rem;
+        border-top: 1px dashed #212529;
+        border-bottom: 1px dashed #212529;
+    }
+    blockquote{
+        padding-left: .5rem;
+        border-left: .5rem solid #dddddd;
+    }
+    ul, ol{
+        padding-left: 1rem
+    }
+}
+.post-excerpt{
+    h1, h2, h3, h4, h5, h6{
+        font-size: 1.25rem;
+    }
+}

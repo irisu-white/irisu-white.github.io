@@ -1,10 +1,11 @@
 _site/
 _drafts/
-.DS_Store
 .idea/
 .sass-cache
+.jekyll-metadata
+.jekyll-cache
+vendor
 Gemfile
 Gemfile.lock
+.DS_Store
 _posts/.MWebMetaData/
-.jekyll-metadata
-start

@@ -1,50 +1,24 @@
 # Site settings
-title: RabbitHouse
-email: irisu@uprprc.club
-description: > # this means to ignore newlines until "baseurl:"
+title: Irisu's Library
+description: >- # this means to ignore newlines until "baseurl:"
   Blog of Irisu White
-baseurl: "" # the subpath of your site, e.g. /blog/
-#url: "http://rabbithouse.me" # the base hostname & protocol for your site
-rss_url: /pages/feed.xml
-author: Irisu White
-
-# Sidebar filter
-# Choose 'tag' or 'category' as filter in sidebar.
-filter: 'tag'
-recent_num: 20
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Social account
-#twitter:
-#weibo:
-github: irisu-white
-#instagram:
-#linkedin:
-
-# avatar and Favicon
-avatar: /assets/img/avatar.png
-favicon: /assets/img/favicon.png
-
-# disqus config
-#disqus:
-#  shortname: suyan-zh
-
-# google analytics config
-#ga:
-#  id: UA-54767140-1
-#  url: yansu.org
+email: irisu@uprprc.net
+github_username:  irisu-white
 
 # Build settings
 permalink: /:year/:month/:day/:title.html
 markdown: kramdown
-highlighter: rouge
 mathjax: disabled
 sass:
   style: compressed
 
 # Jekyll Plugin
 # https://help.github.com/articles/adding-jekyll-plugins-to-a-github-pages-site/
-gems:
-  - jekyll-sitemap
-  - jekyll-seo-tag
-  - jekyll-feed
-
+#gems:
+#  - jekyll-feed
+#  - jekyll-sitemap
+#  - jekyll-seo-tag

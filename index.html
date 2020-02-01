@@ -1,0 +1,43 @@
+---
+layout: default
+---
+<div class="row">
+    <div class="col">
+        <div id="post-list" class="list-group list-group-flush">
+            {% for post in site.posts %}
+            <div class="list-group-item bg-light">
+                <h4 class="mb-3">
+                    <a class="text-dark" href="{{ post.url }}">{{ post.title }}</a>
+                </h4>
+                <div class="mb-3 text-muted">
+                    <span class="icon-clock">
+                        <span>{{ post.date | date: "%Y-%m-%d" }}</span>
+                    </span>
+                    {% if post.tags.size != 0 %}
+                    <span class="icon-price-tags">
+                        {% for tag in post.tags %}
+                        <span>{{ tag }}</span>
+                        {% endfor %}
+                    </span>
+                    {% endif %}
+                    {% if post.categories.size != 0 %}
+                    <span class="icon-bookmarks">
+                        {% for category in post.categories %}
+                        <span>{{ category }}</span>
+                        {% endfor %}
+                    </span>
+                    {% endif %}
+                </div>
+                <div class="post-excerpt">{{ post.excerpt }}</div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="col-3">
+        {% include filter.html %}
+    </div>
+</div>
+<nav class="mt-4 d-flex justify-content-center" aria-label="post navigation">
+    <ul id="post-selector" class="mb-0 pagination"></ul>
+</nav>
+<script src="/assets/js/pagination.js"></script></script>

@@ -1,0 +1,30 @@
+<div id="filter">
+    <!-- Tag -->
+    {% if site.tags.size != 0 %}
+    <ul class="list-group mb-4">
+        <li class="list-group-item list-group-item-dark">Tage</li>
+        {% for tag in site.tags %}
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            {{ tag[0] }}
+            <span class="badge badge-dark">
+                {{ tag[1].size }}
+            </span>
+        </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    <!-- Category -->
+    {% if site.categories.size != 0 %}
+    <ul class="list-group">
+        <li class="list-group-item list-group-item-dark">Category</li>
+        {% for category in site.categories %}
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            {{ category[0] }}
+            <span class="badge badge-dark">
+                {{ category[1].size }}
+            </span>
+        </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</div>

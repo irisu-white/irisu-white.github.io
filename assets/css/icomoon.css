@@ -1,0 +1,74 @@
+@font-face {
+  font-family: 'icomoon';
+  src:
+    url('fonts/icomoon.ttf?kidbcz') format('truetype'),
+    url('fonts/icomoon.woff?kidbcz') format('woff'),
+    url('fonts/icomoon.svg?kidbcz#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-price-tags:before {
+  content: "\e936";
+}
+.icon-clock:before {
+  content: "\e94e";
+}
+.icon-lab:before {
+  content: "\e9aa";
+}
+.icon-attachment:before {
+  content: "\e9cd";
+}
+.icon-bookmarks:before {
+  content: "\e9d3";
+}
+.icon-enter:before {
+  content: "\ea13";
+}
+.icon-exit:before {
+  content: "\ea14";
+}
+.icon-backward2:before {
+  content: "\ea1f";
+}
+.icon-forward3:before {
+  content: "\ea20";
+}
+.icon-first:before {
+  content: "\ea21";
+}
+.icon-last:before {
+  content: "\ea22";
+}
+.icon-omega:before {
+  content: "\ea66";
+}
+.icon-section:before {
+  content: "\ea76";
+}
+.icon-mail4:before {
+  content: "\ea86";
+}
+.icon-rss:before {
+  content: "\ea9b";
+}
+.icon-github:before {
+  content: "\eab0";
+}
