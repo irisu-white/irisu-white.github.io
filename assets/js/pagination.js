@@ -64,7 +64,23 @@ $(document).ready(function(){
         $("#post-selector").twbsPagination("changeTotalPages", count, 1);
     });
     $("#fcollection").on("click", function(){
-        // TODO
+        let target = [];
+        $("#post-list").children().each(function(){
+            if($(this).find(".post-column").length > 0){
+                target.push($(this));
+            }
+            $(this).hide();
+        });
+        if(target.length > 0){
+            window.filter = target;
+            $("#post-selector").twbsPagination(
+                "changeTotalPages",
+                Math.ceil(target.length / 8), 1
+            );
+        }
+        else{
+            throw new Error("filter is empty");
+        }
     });
     $("#filter").children(".filter-tag").each(function(){
         let v = $(this).find(".data").html();

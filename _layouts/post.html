@@ -21,9 +21,29 @@ layout: default
             {% endfor %}
         </span>
         {% endif %}
+        {% if page.column %}
+        <span class="icon-lab">
+            <span>{{ page.column }}</span>
+        </span>
+        {% endif %}
     </div>
 </div>
 <hr class="mb-4" />
 <div id="post-main">
     {{ content }}
+    {% if page.column %}
+        {% assign collection = site.collections | where: "label", page.column | first %}
+        <h3 class="icon-attachment">
+            <span>{{ collection.label }} - {{ collection.docs.size }}篇文章</span>
+        </h3>
+        {% if collection.docs.size != 0 %}
+        <ul>
+            {% for doc in collection.docs %}
+            <li><a class="text-dark" href="{{ doc.url }}">{{ doc.title }}</a></li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p>咕咕咕...</p>
+        {% endif %}
+    {% endif %}
 </div>

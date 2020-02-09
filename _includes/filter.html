@@ -1,18 +1,21 @@
 <div id="filter" class="list-group list-group-flush">
     <!-- default -->
+    {% assign column = site.collections.size | minus: 1 %}
     <h4 class="m-0 px-0 list-group-item bg-light">Default</h4>
     <a href="#" id="farticle" class="list-group-item bg-light list-group-item-action">
         <div class="d-flex justify-content-between align-items-center">
             <span>Article</span>
-            <span class="badge badge-dark">{{ site.posts.size }}</span>
+            <span class="badge badge-dark">{{ site.posts.size | plus: column }}</span>
         </div>
     </a>
-    <a href="#" id="fcollection" class="list-group-item bg-light list-group-item-action">
+    {% if column != 0 %}
+    <a href="#Collection" id="fcollection" class="list-group-item bg-light list-group-item-action">
         <div class="d-flex justify-content-between align-items-center">
             <span>Collection</span>
-            <span class="badge badge-dark">0</span>
+            <span class="badge badge-dark">{{ column }}</span>
         </div>
     </a>
+    {% endif %}
     <!-- Tag -->
     {% if site.tags.size != 0 %}
     <h4 class="m-0 px-0 list-group-item bg-light">Tag</h4>

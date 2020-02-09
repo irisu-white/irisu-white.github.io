@@ -27,6 +27,11 @@ layout: default
                         {% endfor %}
                     </span>
                     {% endif %}
+                    {% if post.column %}
+                    <span class="icon-lab">
+                        <span class="post-column">{{ post.column }}</span>
+                    </span>
+                    {% endif %}
                 </div>
                 <div class="post-excerpt">{{ post.excerpt }}</div>
             </div>

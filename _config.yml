@@ -9,6 +9,11 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 email: irisu@uprprc.net
 github_username:  irisu-white
 
+# Collections
+collections:
+  RE4B-Challenge:
+    output: true
+
 # Build settings
 permalink: /:year/:month/:day/:title.html
 markdown: kramdown
