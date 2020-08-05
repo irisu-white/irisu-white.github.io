@@ -3,28 +3,31 @@ title: "About Me"
 layout: about
 ---
 
-ID：Irisu White / 浅白色的Irisu
+Name：Irisu White / KonataP
 
-两个ID的本体是相同的，区别在于添加neta的程度
+* 二进制安全工程师
+* 音乐游戏爱好者
+* Nanahira Funs
 
-Irisu这个名字本身也是neta
+因为irisu经常被占用，所以也会简写为irisuw
+
+P是Pure Memory的意思，不是同人音乐常用的P
 
 ## 爱好
 
-* Haskell，虽然很难但是很有趣
-* OSU！努力中，虽然很菜但是很快乐
-* TouHou Project，Normal级，Hard级努力中
+* Arcaea, 11.0 ptt
+* Coding as a hobby
+* Sleep，过于困倦的时候会影响思考
+* Game，独立游戏和RPG，FPS苦手
 
 ## 日常
 
-* 与Linux做斗争，Arch实在是太棒了
-* C / C++ / Python / Haskell，只会写原生
+* 与Linux做斗争，ArchLinux很实用
+* C / C++ / Python，rust入手中
 * 使用IDA和GDB尝试做一些事情，但是经常失败
-* 向Github仓库push各种各样的东西，只是频率太低
 
-* 玩一盘绀珠传放松一下
-* 偶尔补补番，很喜欢各种故事
-* 日常闲聊，游戏 / 我吃不到的美食 / (云)撸猫 / 看别人画画 / ...
+* 轻百合真好看
+* 设计一些奇思妙想的游戏道具 
 
 ## Friend Link
 
