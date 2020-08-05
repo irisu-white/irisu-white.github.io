@@ -26,8 +26,8 @@ P是Pure Memory的意思，不是同人音乐常用的P
 * C / C++ / Python，rust入手中
 * 使用IDA和GDB尝试做一些事情，但是经常失败
 
-* 轻百合真好看
-* 设计一些奇思妙想的游戏道具 
+* 很喜欢故事的friends
+* 构思意义不明的游戏道具
 
 ## Friend Link
 
